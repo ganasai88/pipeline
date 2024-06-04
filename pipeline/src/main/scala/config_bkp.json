@@ -1,0 +1,28 @@
+{
+  "file_input": [
+    {
+      "source_type": "local",
+      "table_name": "my_table",
+      "path": "C:\\Users\\ganas\\NewScala\\NewProject\\data\\file2.csv"
+    },
+    {
+      "source_type": "local",
+      "table_name": "my_table_2",
+      "path": "C:\\Users\\ganas\\NewScala\\NewProject\\data\\file2.csv"
+    }
+  ],
+  "transform": [{
+    "table_name": "result_1",
+    "sql": "select * from my_table join my_table_2"
+  },
+    {
+      "table_name": "result_2",
+      "sql": "select * from result_1"
+    }
+  ]
+,
+  "file_write":{
+    "file_name":"output",
+    "file_output":"C:\\Users\\ganas\\NewScala\\NewProject\\data\\output.csv"
+  }
+}

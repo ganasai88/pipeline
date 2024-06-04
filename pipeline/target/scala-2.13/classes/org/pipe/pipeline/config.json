@@ -1,0 +1,31 @@
+{
+  "file_input": [
+    {
+      "source_type": "local",
+      "table_name": "my_table",
+      "path": "C:\\Users\\ganas\\NewScala\\pipeline\\data\\file2.csv"
+    },
+    {
+      "source_type": "local",
+      "table_name": "my_table_1",
+      "path": "C:\\Users\\ganas\\NewScala\\pipeline\\data\\file1.csv"
+    },
+    {
+      "source_type": "local",
+      "table_name": "my_table_2",
+      "path": "C:\\Users\\ganas\\NewScala\\pipeline\\data\\file1.csv"
+    }
+  ],
+  "transform": [
+    {
+      "table_name": "result_1",
+      "sql": "SELECT * FROM my_table\nUNION\nSELECT * FROM my_table_1;\n"
+    }
+  ],
+  "file_write":[
+    {
+    "file_name":"result_1",
+    "file_output":"C:\\Users\\ganas\\NewScala\\pipeline\\data\\output.csv"
+    }
+  ]
+}
